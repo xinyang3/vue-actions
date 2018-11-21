@@ -3,13 +3,18 @@
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
-
-
-      <li>123
-        <router-link to="test1">test1</router-link>
+      <li>
+        <a
+          href="https://vuejs.org"
+          target="_blank"
+        >
+          Core Docs
+        </a>
+      </li>
+      <li>
+        <router-link to="">vue component-in-depth test</router-link>
       </li>
     </ul>
-
   </div>
 </template>
 
@@ -19,6 +24,7 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+
     }
   }
 }

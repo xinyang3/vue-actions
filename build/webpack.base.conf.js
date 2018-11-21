@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const nodeExternals = require('webpack-node-externals');
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -20,7 +21,9 @@ const createLintingRule = () => ({
 })
 
 module.exports = {
+  target: 'web',
   context: path.resolve(__dirname, '../'),
+  // externals: [nodeExternals()],
   entry: {
     app: './src/main.js'
   },
@@ -40,11 +43,19 @@ module.exports = {
   },
   module: {
     rules: [
-      // ...(config.dev.useEslint ? [createLintingRule()] : []),
+      ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
+      },
+      {
+        test: /\.styl(us)?$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
       },
       {
         test: /\.js$/,

@@ -1,7 +1,7 @@
 {
   "name": "my-vue",
   "version": "1.0.0",
-  "description": "vue first test project",
+  "description": "my first vue project",
   "author": "zhuxy",
   "private": true,
   "scripts": {
@@ -14,8 +14,14 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "element-ui": "^2.4.10",
+    "gojs": "^1.8.32",
+    "redis": "^2.8.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
