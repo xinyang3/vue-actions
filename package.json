@@ -15,11 +15,14 @@
   },
   "dependencies": {
     "element-ui": "^2.4.10",
+    "eslint-plugin-vue": "^4.7.1",
+    "fullpage.js": "^3.0.3",
     "gojs": "^1.8.32",
     "redis": "^2.8.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue": "^2.5.2",
+    "vue-fullpage.js": "^0.1.0",
     "vue-router": "^3.0.1",
     "webpack-node-externals": "^1.7.2"
   },
