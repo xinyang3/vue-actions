@@ -17,11 +17,27 @@
             <el-menu-item index="3">消息中心</el-menu-item>
             <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
         </el-menu>
+        <img src="../../../static/agirl2.jpg" class="img">
+        <img src="../../../static/home-word.png" class="img">
+        <div class="bg">bg</div>
+        <child-one></child-one>
     </div>
 </template>
 <script>
+    import childOne from './children/child-one.vue';
+    
 export default {
   name: 'elementHead',
+  created () {
+    // var fs = require('fs');
+    // var result = fs.readFileSync('../../../static/agirl2.jpg', (error, data) => {
+    //     console.log(data)
+    // });
+  
+    var a = require('../../../static/agir' + '1.jpg');
+    console.log(a);
+
+  },
   data () {
     return {
       activeIndex: '2-2'
@@ -31,11 +47,23 @@ export default {
     handleSelect () {
       console.log(arguments)
     }
+  },
+  components: {
+    childOne: childOne
   }
 }
 </script>
 <style>
     .head-content {
         width: 100%;
+    }
+    .img {
+        width: 200px;
+        height: 200px;
+    }
+    .bg {
+        width: 200px;
+        height: 200px;
+        background: url('../../../static/caihong.jpg')
     }
 </style>
