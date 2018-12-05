@@ -7,23 +7,26 @@ import routes from './router/index.js'
 import customerDirective from './utils/customer-directive.js'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+// import 'fullpage.js/dist/fullpage.css'
+// import VueFullpage from 'vue-fullpage.js';
+// Vue.use(VueFullpage);
 
 Vue.use(ElementUI)
 Vue.use(Router)
 
 var router = new Router({
-  routes: routes
+    routes: routes
 })
 console.log(router)
-// Vue.use(router)
+    // Vue.use(router)
 Vue.config.productionTip = false
 
 customerDirective()
 Vue.config.silent = true
 
 new Vue({
-  // el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    // el: '#app',
+    router,
+    components: { App },
+    template: '<App/>'
 }).$mount('#app')
