@@ -24,7 +24,7 @@
     </div>
 </template>
 <script>
-    import childOne from './children/child-one.vue';
+import childOne from './children/child-one.vue'
     
 export default {
   name: 'elementHead',
@@ -33,9 +33,9 @@ export default {
     // var result = fs.readFileSync('../../../static/agirl2.jpg', (error, data) => {
     //     console.log(data)
     // });
-  
-    var a = require('../../../static/agir' + '1.jpg');
-    console.log(a);
+
+    // var a = require('../../../static/agir' + '1.jpg');
+    // console.log(a)
 
   },
   data () {
