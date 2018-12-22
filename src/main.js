@@ -10,23 +10,25 @@ import 'element-ui/lib/theme-chalk/index.css'
 // import 'fullpage.js/dist/fullpage.css'
 // import VueFullpage from 'vue-fullpage.js';
 // Vue.use(VueFullpage);
+import messageBoxCustomer from './views/message-box-customer/src/main.js'
 
 Vue.use(ElementUI)
 Vue.use(Router)
+Vue.use(messageBoxCustomer)
 
 var router = new Router({
-    routes: routes
+  routes: routes
 })
 console.log(router)
-    // Vue.use(router)
+// Vue.use(router)
 Vue.config.productionTip = false
 
 customerDirective()
 Vue.config.silent = true
 
 new Vue({
-    // el: '#app',
-    router,
-    components: { App },
-    template: '<App/>'
+  // el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
 }).$mount('#app')
