@@ -35,6 +35,9 @@
       <p>
         <router-link to="/messageBoxCustomer">messageBoxCustomer</router-link>
       </p>
+      <p>
+        <router-link to="/echarts-demos">echarts-demos</router-link>
+      </p>
     </div>
     <div class="main-area">
       <router-view></router-view>

@@ -1,22 +1,31 @@
 <template>
     <div>
       <el-button class="el-button"  @click="click">click</el-button>
-      <message-box-customer></message-box-customer>
     </div>
 </template>
 <script>
 import messageBoxCustomer from './message-box-customer/src/main.vue'
 export default {
   name: 'cusMsgBoxSample',
-  components: {messageBoxCustomer},
   data () {
 
   },
+  methods: {
+    click () {
+      this.$messageBoxCustomer({
+        title: 'title',
+        message: 'message',
+        confirmText: '确定',
+        onClose: function () {
+          console.log('component closed');
+        },
+        confirm: function () {
+          console.log('confirm text');
+        }
+      })
+    }
+  },
   mounted () {
-    this.$messageBoxCustomer({
-      title: 'title',
-      content: 'content'
-    })
   }
 }
 </script>

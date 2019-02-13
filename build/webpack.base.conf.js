@@ -39,8 +39,16 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'asserts': resolve('src/asserts')
+      'asserts': resolve('src/asserts'),
     }
+  },
+  externals: {
+    'vue': 'Vue',
+    // 'vue-router': 'VueRouter',
+    'axios': 'axios',
+    'element-ui': 'ELEMENT',
+    // 'i18n': 'i18n',
+    'full-page.js': 'VueFullpage'
   },
   module: {
     rules: [

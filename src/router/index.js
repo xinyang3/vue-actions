@@ -10,7 +10,8 @@ import redisClient from '@/components/redisClient.vue'
 import elementHead from '@/components/element/home.vue'
 import fullpageNavigation from '@/views/fullpage-navigation.vue'
 import messageBoxCustomer from '@/views/message-box-customer-example.vue'
-
+const echartsDemos = () => import('@/views/echarts/echarts.vue');
+const echartsDemoOne = () => import('@/views/echarts/demo-one.vue');
 // Vue.use(Router)
 
 // const router = new Router({
@@ -62,7 +63,24 @@ const routes = [{
   path: '/messageBoxCustomer',
   name: 'messageBoxCustomer',
   component: messageBoxCustomer
-}
+},
+  {
+  path: '/echarts-demos',
+  name: 'echartsDemos',
+  component: echartsDemos,
+  children: [
+    {
+      path: 'echarts-demo-one',
+      name: 'demoOne',
+      component: echartsDemoOne
+    },
+    {
+      path: 'echarts-demo-two',
+      name: 'demoTwo',
+      component: echartsDemoOne
+    }
+  ]
+  }
 ]
 // })
 
