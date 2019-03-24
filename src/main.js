@@ -5,8 +5,8 @@ import App from './App'
 import VueRouter from 'vue-router'
 import routes from './router/index.js'
 import customerDirective from './utils/customer-directive.js'
-import ELEMENT from 'element-ui'
-// import 'element-ui/lib/theme-chalk/index.css'
+import Element from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 // import 'fullpage.js/dist/fullpage.css'
 // import VueFullpage from 'vue-fullpage.js';
 // Vue.use(VueFullpage);
@@ -16,7 +16,7 @@ import messageBoxCustomer from './views/message-box-customer/src/main.js'
 // const ElementUI = require('element-ui')
 // const VueRouter = require('vue-router')
 
-Vue.use(ELEMENT)
+Vue.use(Element)
 Vue.use(VueRouter)
 Vue.use(messageBoxCustomer)
 var router = new VueRouter({

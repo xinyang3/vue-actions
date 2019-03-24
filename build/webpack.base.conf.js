@@ -43,10 +43,10 @@ module.exports = {
     }
   },
   externals: {
-    'vue': 'Vue',
+    // 'vue': 'Vue',
     // 'vue-router': 'VueRouter',
     'axios': 'axios',
-    'element-ui': 'ELEMENT',
+    // 'element-ui': 'ELEMENT',
     // 'i18n': 'i18n',
     'full-page.js': 'VueFullpage'
   },
