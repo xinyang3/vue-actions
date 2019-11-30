@@ -38,6 +38,9 @@
       <p>
         <router-link to="/echarts">echarts-demos</router-link>
       </p>
+      <p>
+        <a @click="goPage">to dynamic router-view</a>
+      </p>
     </div>
     <div class="main-area">
       <router-view></router-view>
@@ -46,7 +49,17 @@
 </template>
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+
+    }
+  },
+  methods: {
+    goPage () {
+      this.$router.push({name: 'shop'})
+    }
+  }
 }
 </script>
 <style>

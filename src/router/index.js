@@ -65,7 +65,7 @@ const routes = [{
   name: 'messageBoxCustomer',
   component: messageBoxCustomer
 },
-  {
+{
   path: '/echarts',
   name: 'echarts',
   component: echarts,
@@ -75,9 +75,21 @@ const routes = [{
       name: 'bar1',
       component: bar1
     }
-   
   ]
-  }
+},
+{
+  path: '/home-page',
+  name: 'shops',
+  // component: () => import('@/components/home-page'),
+  component: () => import('@/views/shop-index'),
+  children: [
+    {
+      path: 'shop',
+      name: 'shop',
+      component: () => import('@/views/shop.vue')
+    }
+  ]
+}
 ]
 // })
 

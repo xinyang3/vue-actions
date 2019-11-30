@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "element-ui": "^2.4.10",
-    "eslint-plugin-vue": "^4.7.1",
     "fullpage.js": "^3.0.4",
     "gojs": "^1.8.32",
     "redis": "^2.8.0",
