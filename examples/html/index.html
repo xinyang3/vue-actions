@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <script src="../lib/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <p>
+      a: {{data.a}}
+    </p>
+    <p>
+      b: {{data.b}}
+    </p>
+    <button @click="addProperty">addProperty</button>
+    <button @click="deleteProperty">deleteProperty</button>
+    <button @click="change">changeArrayItem</button>
+    <button @click="change2">changeArrayLength</button>
+
+    <button @click="addProperty2">addProperty2</button>
+    <button @click="change3">changeArrayLength3</button>
+    <ul>
+      <li v-for="item in array" :key="item">
+        {{item}}
+      </li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+    vm = new Vue({
+      el: '#app',
+      data() {
+        return {
+          data: {
+            a: 1
+          },
+          array: [1, 2, 3]
+        }
+      },
+      methods: {
+        // 直接在vm.$data上增减属性,修改数组的length 无法监听
+        addProperty() {
+          this.data.b = 123
+          console.log(this.data)
+        },
+        deleteProperty() {
+          delete this.data['a']
+          console.log(this.data)
+        },
+        change() {
+          this.array[1] = 'abcd';
+        },
+        change2() {
+          this.array.length = 10
+        },
+        // 需要用$set $delete改变
+        addProperty2() {
+          this.$set(this.data, 'b', 'abcde')
+        },
+        change3() {
+          this.$set(this.array, 2, 'aaaaaaaa') // 改变了
+          // this.array = [1, 2, 3, 4, 5]
+        }
+
+      },
+      // render: () => {}
+    })
+  </script>
+</body>
+
+</html>
